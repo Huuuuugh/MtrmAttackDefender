@@ -26,8 +26,8 @@ public class MtrmAttackDefender extends JavaPlugin{
                             System.out.println("[MTRM拦截]"+packetEvent.getPlayer().getName()+"跳过检查");
                         }else{
                             packetEvent.setCancelled(true);
-                            System.out.println("[PPAP]MTRM发包改合成已取消");
-                            Bukkit.broadcastMessage("[PPAP]"+packetEvent.getPlayer().getName()+"试图用MTRM发包改合成！已封禁");
+                            System.out.println("[PPAP]MTRM发包已取消");
+                            Bukkit.broadcastMessage("[PPAP]"+packetEvent.getPlayer().getName()+"试图用MTRM发包！已封禁");
                             packetEvent.getPlayer().setBanned(true);
                             packetEvent.getPlayer().kickPlayer("该操作不可用！");
                             Bukkit.getServer().banIP(packetEvent.getPlayer().getName());
